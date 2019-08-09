@@ -77,3 +77,4 @@ class SegNet(nn.Module):
     pool5, index5 = self.pool4(h)
 
     uppool5 = F.max_unpool2d(pool5, index5, kernel_size=2, stride=2)
+
