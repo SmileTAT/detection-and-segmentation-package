@@ -98,7 +98,7 @@ class UNet(nn.Module):
 
     decode4 = self.decoder4(pool4)
 
-    decode3 = self.decoder3(torch.cat([decode4, encode4], dim=1))
+    decode3 = self.decoder3(torch.cat([decode4, encode4], dim=1))  # If the sizes of two feature maps don't match, using F.upsample_bilinear
 
     decode2 = self.decoder2(torch.cat([decode3, encode3], dim=1))
 
