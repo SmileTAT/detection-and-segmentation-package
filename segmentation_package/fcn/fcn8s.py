@@ -2,7 +2,8 @@ from torch import nn
 
 
 class FCN8s(nn.Module):
-  """Builds fcn8s model based on vgg16 backbone. """
+  """Builds fcn8s model based on vgg16 backbone.
+      without batch normalization. """
 
   def __init__(self, num_classes=21):
     super(FCN8s, self).__init__()
